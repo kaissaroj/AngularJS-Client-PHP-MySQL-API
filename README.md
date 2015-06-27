@@ -2,7 +2,7 @@
 This is simple AngularJs application making use of PHP and MYSQL backed REST API.
 
 ## Demo
-http://sarojsubedi.info.np/projects/angular-api-demo/
+<!--http://sarojsubedi.info.np/projects/angular-api-demo/-->
 
 ### Using the demo
 Add new trip with % commission. Set rates bt number of people in the group. 
