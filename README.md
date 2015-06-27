@@ -1,11 +1,10 @@
 ## AngularJs PHP-MySQL API Demo
 This is simple AngularJs application making use of PHP and MYSQL backed REST API.
-
-## Demo
+<!--## Demo-->
 <!--http://sarojsubedi.info.np/projects/angular-api-demo/-->
-
+<!--
 ### Using the demo
-Add new trip with % commission. Set rates bt number of people in the group. 
+Add new trip with % commission. Set rates bt number of people in the group.--> 
 
 ## Installation
   <li>Install PHP and MySQL
