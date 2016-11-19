@@ -1,4 +1,3 @@
-
 <?php
 
 require_once '../includes/db.php';
@@ -21,18 +20,18 @@ $listOfProducts = $selectstmt->execute();
     echo 'Unable to access.';
 }
 if (!$listOfProducts) {
-  header("Status: 500 Database error");
+  //header("Status: 500 Database error");
   echo 'Could not retrieve list of products.';
   exit;
 }
 
 $products = array();
 
-
 while ($product = $selectstmt->fetch(PDO::FETCH_ASSOC)) {
   $productId = $product['id'];  
   $sql2 ="SELECT id, low_num_pers as min, high_num_pers as max, retail_rate_per_pers as rate FROM $TBL_PRICE WHERE product_id = :productId";
   $stmt2 = $pdo->prepare($sql);
+  $stmt2->bindParam(':tbl_price', $TBL_PRICE);
   $stmt2->bindParam(':productId', $productId);
   $prices = array();
   while ($price = $stmt2->fetch(PDO::FETCH_ASSOC)) {
