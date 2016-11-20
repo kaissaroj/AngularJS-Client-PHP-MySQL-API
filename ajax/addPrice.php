@@ -25,7 +25,7 @@ if ($_REQUEST['productId'] || $_REQUEST['minNo'] || $_REQUEST['maxNo'] || $_REQU
     $price_id = filter_var($_REQUEST['priceId'], FILTER_SANITIZE_STRING);
     $updatesql = "UPDATE :table_price SET low_num_pers= :low_num_pers, high_num_pers= :high_num_pers, retail_rate_per_pers=:retail_rate_per_pers, product_id=:product_id WHERE id= :price_id";
     $updatestatement = $pdo->prepare($updatesql);
-    $updatestatement->bindParam(':table_price', $_TBL_PRICE);
+    $updatestatement->bindParam(':table_price', $TBL_PRICE);
     $updatestatement->bindParam(':low_num_pers', $low_num_pers);
     $updatestatement->bindParam(':high_num_pers', $high_num_pers);
     $updatestatement->bindParam(':retail_rate_per_pers', $retail_rate_per_pers);
